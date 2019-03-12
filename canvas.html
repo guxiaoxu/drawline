@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Draw Straight Lines on Image</title>
+    <script type="text/javascript" src="drawline.js"></script>
+</head>
+<body>
+    <img id="sample_map" width="950" height="450" src="sample_map.png" alt="The Scream" style="display: none">
+
+    <div name="buttons">
+        <button id="clear" onclick="clearPoints()">Clear</button>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>LocalStorage:
+        <button id="save" onclick="savePoints()">Save</button>
+        <button id="load" onclick="loadPoints()">Load</button>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>File:
+        <button id="saveFile" onclick="savePointsFile()">Save As File</button>
+        <input type="file" id="loadFile" onchange="loadPointsFile(this.files[0])">
+    </div>
+    <hr/>
+
+    <canvas id="dlCanvas" width="950" height="450" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.
+    </canvas>
+</body>
+</html>
